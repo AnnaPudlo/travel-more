@@ -93,7 +93,9 @@ body {
     height: 56px;
     line-height: 56px;
     border: none;
-    padding: 0;
+    padding: 0 3rem;
+    color: #333;
+    font-size: 1.5rem;
 }
 
 ::-webkit-input-placeholder {
@@ -139,7 +141,7 @@ body {
     font-size: .875rem;
     letter-spacing: .1em;
     margin: 1em 0;
-    transition: .5s;
+    transition: .4s;
     &-search {
         width: 150px;
         height: 56px;
@@ -149,6 +151,7 @@ body {
         background: #5474fd;
         line-height: 56px;
         position: relative;
+        transition: .4s;
         &:after {
             content: url(../img/search.png);
             position: absolute;
@@ -187,6 +190,7 @@ body {
         text-transform: uppercase;
         font-family: 'Aleo', serif;
         font-size: .875rem;
+        transition: .4s;
         &:hover {
             text-decoration: underline;
         }
@@ -217,12 +221,16 @@ body {
     &__info {
         padding-top: 80px;
     }
+    &__pictures{
+        display: flex;
+        flex-direction: column;
+        padding-left: 66px;
+    }
     &__thumb {
-        max-width: 350px;
-        width: 100%;
-        margin-left: 66px;
+        width: 70%;
+        align-self: flex-start;
         &_right {
-            margin-left: auto;
+            align-self: flex-end;
         }
     }
     &__img {
@@ -349,12 +357,16 @@ body {
         margin: 4em 0;
     }
     &__thumb {
-        height: 280px;
+        width: 40%;
+        min-height: 280px;
     }
     &__img {
         height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
     &__info {
+        width:60%;
         padding: 15px;
         text-align: left;
         background-color: #333;
